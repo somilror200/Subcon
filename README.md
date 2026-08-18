@@ -1,6 +1,6 @@
-# Subcon P/L Website
+# Subcon Website
 
-Official marketing website for Subcon P/L, a residential concrete slab company servicing Western Melbourne, Northern Melbourne and the Ballarat region.
+Official marketing website for Subcon Pty Ltd, a residential concrete slab company servicing Western Melbourne, Northern Melbourne and the Ballarat region.
 
 ## Live site
 
