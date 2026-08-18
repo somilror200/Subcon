@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const menu=document.querySelector('.menu-btn');
   const nav=document.querySelector('.site-nav');
   const brand=document.querySelector('.brand');
-  const mobileNav=window.matchMedia('(max-width:1000px)');
+  const mobileNav=window.matchMedia('(max-width:1050px)');
   let menuReturnFocus=null;
 
   const onScroll=()=>{
@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const prepareMobileNav=()=>{
     if(!nav||!mobileNav.matches)return;
-    /* Keep the menu viewport-fixed even after the page header has scrolled.
-       Safari/Chromium can otherwise treat a fixed child of a filtered header
-       as being fixed to the header itself. */
     if(header)header.classList.remove('scrolled');
     nav.style.position='fixed';
     nav.style.top='0';
