@@ -1,3 +1,10 @@
+(()=>{
+  const qaStyles=document.createElement('link');
+  qaStyles.rel='stylesheet';
+  qaStyles.href='fixes.css?v=20260818';
+  document.head.appendChild(qaStyles);
+})();
+
 document.addEventListener('DOMContentLoaded',()=>{
   const body=document.body;
   const header=document.querySelector('.site-header');
