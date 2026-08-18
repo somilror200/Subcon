@@ -1,0 +1,155 @@
+/* Subcon responsive QA overrides — 2026-08-18 */
+
+/* Prevent intrinsic-width grid/flex children from forcing horizontal overflow. */
+.hero__copy,
+.page-hero__inner,
+.section-intro > *,
+.cta-panel > *,
+.split__content,
+.copy-grid > *,
+.contact-card,
+.service-card,
+.footer-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  max-width: 100%;
+}
+
+/* Project images should stand on their own without misleading captions. */
+.work-card__label {
+  display: none !important;
+}
+
+/* Gallery remains clickable, but no repeated “View project” badge is shown. */
+.gallery-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+.gallery-item {
+  cursor: zoom-in;
+}
+
+.designer-credit {
+  margin-top: 1rem !important;
+  padding-top: .85rem;
+  border-top: 1px solid #2f2f2f;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  /* The original display sizes were based on viewport width, but CTA cards have
+     significant internal padding. These sizes are based on the usable column. */
+  .hero__copy {
+    width: 100%;
+    padding-right: .35rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 13vw, 4.25rem);
+    line-height: .99;
+    letter-spacing: -.04em;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.75rem, 11.5vw, 3.8rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
+
+  .section-intro h2,
+  .section--dark h2,
+  .copy-grid__aside h2,
+  .split__content h2,
+  .contact-card h2 {
+    font-size: clamp(2.15rem, 9.6vw, 3.35rem);
+    line-height: 1;
+  }
+
+  .cta-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 2.35rem 1.25rem 2.6rem;
+    gap: 2rem;
+  }
+
+  .cta-panel h2 {
+    font-size: clamp(2.05rem, 8.9vw, 3rem);
+    line-height: 1.03;
+    letter-spacing: -.04em;
+  }
+
+  .cta-panel p {
+    width: 100%;
+    max-width: 100%;
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+
+  .cta-panel__actions {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .cta-panel__actions .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .kicker {
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: .64rem;
+    letter-spacing: .15em;
+  }
+
+  .service-card,
+  .contact-row,
+  .footer-col {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero h1 {
+    font-size: clamp(2.8rem, 12.4vw, 3.55rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.6rem, 10.8vw, 3.25rem);
+  }
+
+  .cta-panel h2 {
+    font-size: clamp(1.95rem, 8.55vw, 2.5rem);
+  }
+
+  .section-intro h2,
+  .section--dark h2,
+  .copy-grid__aside h2,
+  .split__content h2,
+  .contact-card h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+}
+
+@media (max-width: 350px) {
+  .cta-panel {
+    padding-inline: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .cta-panel h2 {
+    font-size: 1.9rem;
+  }
+}
