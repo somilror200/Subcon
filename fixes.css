@@ -44,6 +44,50 @@ p {
   font-weight: 700;
 }
 
+/* Real Google Map on the contact page. */
+.map-embed {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  background: #111;
+}
+
+.map-embed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-right: 10px solid var(--red);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  border: 0;
+}
+
+.location-actions {
+  margin-top: 2rem;
+}
+
+@media (max-width: 1050px) {
+  .map-embed {
+    min-height: 470px;
+  }
+
+  .map-embed::after {
+    border-right: 0;
+    border-bottom: 8px solid var(--red);
+  }
+
+  .map-embed iframe {
+    min-height: 470px;
+  }
+}
+
 @media (max-width: 700px) {
   /* The original display sizes were based on viewport width, but CTA cards have
      significant internal padding. These sizes are based on the usable column. */
@@ -115,6 +159,15 @@ p {
   .contact-row,
   .footer-col {
     overflow-wrap: anywhere;
+  }
+
+  .map-embed,
+  .map-embed iframe {
+    min-height: 360px;
+  }
+
+  .location-actions .btn {
+    width: 100%;
   }
 }
 
